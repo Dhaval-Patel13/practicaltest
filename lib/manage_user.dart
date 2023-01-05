@@ -119,7 +119,7 @@ class _ManageUserState extends State<ManageUser> {
           ),
           Row(
             children: [
-             Radio(value: "Male", groupValue: textEditingControllerGender.text, onChanged: (value){
+             Radio(value: "M", groupValue: textEditingControllerGender.text, onChanged: (value){
                textEditingControllerGender.text = value.toString();
                setState(() {});
              },
@@ -129,7 +129,7 @@ class _ManageUserState extends State<ManageUser> {
               const SizedBox(
                 width: 16,
               ),
-              Radio(value: "Female", groupValue: textEditingControllerGender.text, onChanged: (value){
+              Radio(value: "F", groupValue: textEditingControllerGender.text, onChanged: (value){
                 textEditingControllerGender.text = value.toString();
                 setState(() {});
               }),
@@ -137,7 +137,7 @@ class _ManageUserState extends State<ManageUser> {
               const SizedBox(
                 width: 16,
               ),
-              Radio(value: "Other", groupValue: textEditingControllerGender.text, onChanged: (value){
+              Radio(value: "O", groupValue: textEditingControllerGender.text, onChanged: (value){
                 textEditingControllerGender.text = value.toString();
                 setState(() {});
               }),

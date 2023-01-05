@@ -60,7 +60,7 @@ class DatabaseHelper {
     });
   }
 
-  Future<List<ModelUser>> getAllUser({String genderFilter = ""}) async {
+  Future<List<ModelUser>> getAllUser({String genderFilter = "M"}) async {
     Database db = await instance.database;
     var result;
     if(genderFilter.isEmpty){

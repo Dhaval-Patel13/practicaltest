@@ -18,9 +18,9 @@ class _HomeState extends State<Home> {
   String defualtGenderValue = 'All';
   var gender = [
     'All',
-    'Male',
-    'Female',
-    'other',
+    'M',
+    'F',
+    'O',
   ];
   String defualtAgeRange = 'Any';
   var age = [
@@ -71,7 +71,7 @@ class _HomeState extends State<Home> {
                 onChanged: (String? newValue) {
                   setState(() {
                     defualtGenderValue = newValue!;
-                    getAllUsersByGender();
+                    getUsers();
                   });
                 },
               ),
@@ -142,7 +142,7 @@ class _HomeState extends State<Home> {
   }
 
   Future<void> getUsers() async {
-    listOfUser = await dbHelper.getAllUser();
+    listOfUser = await dbHelper.getAllUser(genderFilter: defualtGenderValue);
     setState(() {});
   }
 
